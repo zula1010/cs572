@@ -18,16 +18,13 @@ const promise = function() {
 async function aSync() {
   try {
     let result = await promise();
-    console.log(result);
+    console.log(result + "async await finished");
   } catch {
     console.log("error");
   }
 }
-from(promise).subscribe(e => console.log(e));
-console.log("observable finished");
+from(promise()).subscribe(e => console.log(e + "observable finished"));
 console.log("This house is nice!".filterWords(["house", "nice"]));
 console.log("ES6 finished");
-promise().then(data => console.log(data));
-console.log("Promise finished");
+promise().then(data => console.log(data + "Promise finished"));
 aSync();
-console.log("async await finished");
