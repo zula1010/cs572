@@ -1,0 +1,10 @@
+setImmediate() - is designed to execute a script once the current poll phase completes.will execute immediately. does not use queue of functions only checks the queue of I/O event handlers. when it finishes it executes.
+setTimeout() - schedules a script to be run after a minimum threshold in ms has elapsed.will execute after all the executing and queued event handlers.
+The main advantage to using setImmediate() over setTimeout() is setImmediate() will always be executed before any timers if scheduled within an I/O cycle, independently of how many timers are present.
+
+
+process.nextTick()                         |            setImmediate()
+is not part of event loop                  |        is part of event loop (separate phase)
+executes before eventloop                  |    exectutes cureent poll phase completes
+
+http, url, querystring, path, fs, util, os, buffer, domain, events
