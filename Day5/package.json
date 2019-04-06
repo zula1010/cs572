@@ -1,0 +1,16 @@
+{
+  "name": "Day5",
+  "version": "1.0.0",
+  "description": "",
+  "main": "exercise1.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Munkhzul Julia",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "express": "^4.16.4"
+  }
+}
