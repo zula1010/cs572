@@ -1,0 +1,11 @@
+{
+    _id:objectId(),
+    isbn: String,
+    author:String,
+    tag: [Array of String],
+    borrowed : [
+        studentId :String, 
+        studentName:String,
+        date : Date;     
+    ]
+}
