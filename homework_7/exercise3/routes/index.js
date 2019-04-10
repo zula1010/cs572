@@ -23,6 +23,7 @@ router.post('/', function (req, res) {
   }
 })
 router.put('/', function (req, res, next) {
+  console.log(req.body);
   if (req.body) {
     req.dbcollection.save(req.body)
     let collection = req.dbcollection.find({}).toArray();
@@ -31,7 +32,8 @@ router.put('/', function (req, res, next) {
 });
 router.delete('/delete/:id', function (req, res, next) {
   if (req.params.id) {
-    req.dbcollection.deleteOne({ "_id": req.params.id });
+    req.dbcollection.remove({ "_id": req.params.id });
+    console.log("deleted");
     let collection = req.dbcollection.find({}).toArray();
     collection.then(data => res.json(data));
   }
