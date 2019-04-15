@@ -1,4 +1,4 @@
-var University = (function () {
+var University = /** @class */ (function () {
     function University(name, dept) {
         this.name = name;
         this.dept = dept;
@@ -7,6 +7,6 @@ var University = (function () {
         console.log("Graduating {$this.dept} {$year} students");
     };
     return University;
-})();
+}());
 var mum = new University("MUM", "Computer Science");
 mum.graduation(2019);
