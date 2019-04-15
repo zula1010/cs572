@@ -3,7 +3,7 @@ const os = require("os");
 
 (function checkSystem() {
   console.log("Checking your system...");
-  const obs$ = Observable.create(function(observe) {
+  const obs$ = Observable.create(function (observe) {
     const cpus = os.cpus().length;
     const mem = os.totalmem();
     if (mem <= Math.pow(2, 32)) {
@@ -18,4 +18,5 @@ const os = require("os");
     observe.complete();
   });
   obs$.subscribe(x => console.log(x));
+  console.log("j");
 })();
