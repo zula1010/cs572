@@ -6,3 +6,6 @@ class University {
 }
 let mum = new University("MUM", "Computer Science");
 mum.graduation(2019);
+
+
+//export PATH=$PATH:~/opt/bin:~/dev/bin
