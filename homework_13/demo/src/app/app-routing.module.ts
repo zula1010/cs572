@@ -6,7 +6,10 @@ import { ErrorComponent } from './users/error.component';
 
 const routes: Routes = [
   {
-    path: 'users', loadChildren: './users/users.module#UsersModule',
+    path: 'users', component: UsersComponent,
+    children: [
+      { path: 'userdetails', component: UserdetailsComponent }
+    ]
 
   },
   { path: 'err', component: ErrorComponent }
